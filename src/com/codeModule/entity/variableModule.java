@@ -1,10 +1,16 @@
 package com.codeModule.entity;
 
+import org.jsoup.nodes.Document;
+
+import java.util.Map;
+
 /**
  * Created by sosoo on 2016/11/28.
  */
 public class variableModule extends baseModule {
     private String name;
+
+    private DataType dtype;
 
     public String getName() {
         return name;
@@ -14,11 +20,17 @@ public class variableModule extends baseModule {
         return dtype;
     }
 
-    private DataType dtype;
+    public variableModule() {
+    }
 
-    public variableModule(String ID, String name, String dataTypeStr) {
-        super(ID);
-        this.name = name;
-        this.dtype = DataType.StringMap.get(dataTypeStr);
+    @Override
+    protected void init(Map<String, Object> jsonMap) {
+        super.init(jsonMap);
+        this.name = (String) jsonMap.get("name");
+        this.dtype = DataType.StringMap.get(jsonMap.get("dtype"));
+    }
+    public Document modifyHtml(Document html){
+        System.out.println("1");
+        return html;
     }
 }

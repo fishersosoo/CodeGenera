@@ -9,6 +9,7 @@
       <root url="jar://$PROJECT_DIR$/lib/ezmorph-1.0.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.5.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-all-1.9.0.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.3-javadoc.jar!/" />

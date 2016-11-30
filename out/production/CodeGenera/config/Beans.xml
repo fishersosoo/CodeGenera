@@ -3,4 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="INPUT" class="com.codeModule.entity.INPUT" scope="prototype"/>
+    <bean id="OUTPUT" class="com.codeModule.entity.OUTPUT" scope="prototype"/>
+    <bean id="VARIABLE" class="com.codeModule.entity.VARIABLE" scope="prototype"/>
+    <bean id="WHILE" class="com.codeModule.entity.WHILE" scope="prototype"/>
+    <bean id="IF" class="com.codeModule.entity.IF" scope="prototype"/>
+    <bean id="OPERATOR" class="com.codeModule.entity.OPERATOR" scope="prototype"/>
 </beans>

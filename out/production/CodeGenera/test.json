@@ -1,0 +1,47 @@
+{
+  "name":"one",
+  "variableArea": [
+    {
+      "id": "VARIABLE-1479798525302-20",
+      "moduleType": "VARIABLE",
+      "name": "foo",
+      "dtype": "number",
+      "initType":"immediate",
+      "value": "5"
+    },
+    {
+      "id": "INPUT-1479798525302-21",
+      "moduleType": "INPUT",
+      "name": "foofoo",
+      "dtype": "number",
+      "desc": "a number input"
+    },
+    {
+      "id": "OUTPUT-1479798525302-22",
+      "moduleType": "OUTPUT",
+      "name": "foofoofoo",
+      "dtype": "number",
+      "desc": "a number output"
+    }
+  ],
+  "procedureArea": [
+    {
+      "id": "WHILE-1479798525302-23",
+      "moduleType": "WHILE",
+      "condition": {
+
+      },
+      "procedure": [{}, {}, {}, {}, {}]
+    },
+    {
+      "id": "OPERATOR-1479798525302-24",
+      "moduleType": "OPERATOR",
+      "op": "plus",
+      "first": "INPUT-1479798525302-21",
+      "firstType": "VAR",
+      "second": "5",
+      "secondType": "immediate",
+      "assign": "OUTPUT-1479798525302-22"
+    }
+  ]
+}
