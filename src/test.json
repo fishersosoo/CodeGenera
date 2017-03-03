@@ -2,24 +2,24 @@
   "name":"one",
   "variableArea": [
     {
-      "id": "VARIABLE-1479798525302-20",
+      "id": "VARIABLE-1",
       "moduleType": "VARIABLE",
-      "name": "foo",
+      "name": "VARIABLE",
       "dtype": "number",
       "initType":"immediate",
       "value": "5"
     },
     {
-      "id": "INPUT-1479798525302-21",
+      "id": "INPUT-1",
       "moduleType": "INPUT",
-      "name": "foofoo",
+      "name": "INPUT",
       "dtype": "number",
       "desc": "a number input"
     },
     {
-      "id": "OUTPUT-1479798525302-22",
+      "id": "OUTPUT-1",
       "moduleType": "OUTPUT",
-      "name": "foofoofoo",
+      "name": "OUTPUT",
       "dtype": "number",
       "desc": "a number output"
     }
@@ -29,19 +29,33 @@
       "id": "WHILE-1479798525302-23",
       "moduleType": "WHILE",
       "condition": {
-
-      },
-      "procedure": [{}, {}, {}, {}, {}]
-    },
-    {
-      "id": "OPERATOR-1479798525302-24",
+      "id": "INPUT",
       "moduleType": "OPERATOR",
       "op": "plus",
-      "first": "INPUT-1479798525302-21",
+      "first": "VARIABLE",
       "firstType": "VAR",
       "second": "5",
-      "secondType": "immediate",
-      "assign": "OUTPUT-1479798525302-22"
+      "secondType": "immediate"
+      },
+      "procedure": [{
+        "id": "OPERATOR-1",
+        "moduleType": "OPERATOR",
+        "op": "plus",
+        "first": "a",
+        "firstType": "VAR",
+        "second": "5",
+        "secondType": "immediate",
+        "assign": "b"
+      },
+        {        "id": "OPERATOR-2",
+          "moduleType": "OPERATOR",
+          "op": "times",
+          "first": "INPUT-1",
+          "firstType": "VAR",
+          "second": "5",
+          "secondType": "immediate",
+          "assign": "OUTPUT"
+        }]
     }
   ]
 }

@@ -4,7 +4,7 @@ package com.codeModule.entity;
  * Created by sosoo on 2016/11/28.
  */
 public class OperandInfo {
-    public VarType getVarType() {
+    VarType getVarType() {
         return varType;
     }
 
@@ -12,7 +12,7 @@ public class OperandInfo {
         return dataType;
     }
 
-    public String getValue() {
+    String getValue() {
         return value;
     }
 
@@ -20,9 +20,11 @@ public class OperandInfo {
     private DataType dataType;
     private String value;
 
-    public OperandInfo(String varType, String dataType, String value) {
-        this.dataType = DataType.StringMap.get(dataType);
-        this.varType = VarType.StringMap.get(varType);
+    OperandInfo(String varType, String dataType, String value) {
+        if (dataType!=null)
+            this.dataType = DataType.StringMap.get(dataType);
+        if (varType!=null)
+            this.varType = VarType.StringMap.get(varType);
         this.value = value;
     }
 }

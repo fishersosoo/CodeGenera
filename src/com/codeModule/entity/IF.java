@@ -1,6 +1,8 @@
 package com.codeModule.entity;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -26,8 +28,10 @@ public class IF extends procedureModule {
         ArrayList<Object> true_procedure_list = (ArrayList<Object>) jsonMap.get("true_procedure");
         for (Object true_procedure_map :
                 true_procedure_list) {
-            procedureModule oneProcedure = new procedureModule();
-            oneProcedure.init((Map<String, Object>) true_procedure_map);
+            Map map = (HashMap) true_procedure_map;
+            procedureModule oneProcedure = (procedureModule) context.getBean((String) map.get("moduleType"));
+            oneProcedure.setContext(context);
+            oneProcedure.init(map);
             true_procedure.add(oneProcedure);
         }
         if (jsonMap.containsKey("false_condition")) {
@@ -38,16 +42,51 @@ public class IF extends procedureModule {
             ArrayList<Object> false_procedure_list = (ArrayList<Object>) jsonMap.get("false_procedure");
             for (Object false_procedure_map :
                     false_procedure_list) {
-                procedureModule oneProcedure = new procedureModule();
-                oneProcedure.init((Map<String, Object>) false_procedure_map);
+                Map map = (HashMap) false_procedure_map;
+                procedureModule oneProcedure = (procedureModule) context.getBean((String) map.get("moduleType"));
+                oneProcedure.setContext(context);
+                oneProcedure.init(map);
                 false_procedure.add(oneProcedure);
             }
         }
     }
 
     @Override
-    public String getJavaScriptCode() {
-        String javaScriptCode = "";
-        return javaScriptCode;
+    public String generateJavascript() {
+        try {
+            //if(){..}
+            String javaScriptCode = "if(";
+            if (true_condition != null) {
+                String true_condition_code = true_condition.generateJavascript();
+                true_condition_code = true_condition_code.substring(0, true_condition_code.length() - 2);
+            }
+            javaScriptCode += true_condition + ")\n{\n";
+            for (procedureModule module :
+                    true_procedure) {
+                javaScriptCode += module.generateJavascript();
+            }
+            javaScriptCode += "}\n";
+            //else
+            if (!false_procedure.isEmpty()) {
+                javaScriptCode += "else";
+                //if()
+                if (false_condition != null) {
+                    String false_condition_code = false_condition.generateJavascript();
+                    false_condition_code = false_condition_code.substring(0, false_condition_code.length() - 2);
+                    javaScriptCode += " if(" + false_condition_code + ")";
+                }
+                //{...}
+                javaScriptCode += "\n{";
+                for (procedureModule module :
+                        false_procedure) {
+                    javaScriptCode += module.generateJavascript();
+                }
+                javaScriptCode += "}\n";
+            }
+            return javaScriptCode;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

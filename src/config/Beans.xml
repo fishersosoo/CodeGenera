@@ -3,10 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="INPUT" class="com.codeModule.entity.INPUT" scope="prototype"/>
-    <bean id="OUTPUT" class="com.codeModule.entity.OUTPUT" scope="prototype"/>
-    <bean id="VARIABLE" class="com.codeModule.entity.VARIABLE" scope="prototype"/>
-    <bean id="WHILE" class="com.codeModule.entity.WHILE" scope="prototype"/>
-    <bean id="IF" class="com.codeModule.entity.IF" scope="prototype"/>
-    <bean id="OPERATOR" class="com.codeModule.entity.OPERATOR" scope="prototype"/>
+    <bean id="codeGeneraService" class="com.service.CodeGeneraService">
+        <property name="serviceProvider">
+            <bean id="htmlCodeGeneraServiceProvider" class="com.service.HtmlCodeGeneraServiceProvider">
+                <property name="htmlTemplatePath"
+                          value="D:\Project\CodeGenera\out\production\CodeGenera\com\codeModule\FileTemplate\HtmlTemplate.html"/>
+                <property name="moduleBeansPath"
+                          value="config\ModuleBeans.xml"/>
+            </bean>
+        </property>
+    </bean>
 </beans>

@@ -41,7 +41,14 @@ public class Program {
     }
 
     public void setProcedureModules(List<Object> procedureModules) {
-
+        for (Object object : procedureModules) {
+            Map map = (HashMap) object;
+            String moduleTypeStr = (String) map.get("moduleType");
+            procedureModule procedure = (procedureModule) context.getBean(moduleTypeStr);
+            procedure.setContext(context);
+            procedure.init(map);
+            this.procedureModules.add(procedure);
+        }
     }
 
     public void setContext(ApplicationContext context) {

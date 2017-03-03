@@ -41,4 +41,9 @@ public class INPUT extends variableModule {
         html.body().appendChild(div);
         return html;
     }
+
+    @Override
+    public String generateJavascript() {
+        return "var "+this.getName()+"=document.getElementById(\""+this.getId()+"\").value;\n";
+    }
 }

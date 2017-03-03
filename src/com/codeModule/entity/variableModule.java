@@ -12,7 +12,7 @@ public class variableModule extends baseModule {
 
     private DataType dtype;
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -29,8 +29,8 @@ public class variableModule extends baseModule {
         this.name = (String) jsonMap.get("name");
         this.dtype = DataType.StringMap.get(jsonMap.get("dtype"));
     }
-    public Document modifyHtml(Document html){
-        System.out.println("1");
+
+    public Document modifyHtml(Document html) {
         return html;
     }
 }

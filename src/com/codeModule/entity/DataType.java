@@ -19,9 +19,7 @@ public enum DataType {
         StringMap.put("list", DataType.ArrayType);
     }
 
-    ;
-
-    private DataType(String name) {
+    DataType(String name) {
         this.name = name;
     }
 }

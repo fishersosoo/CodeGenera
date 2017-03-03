@@ -1,8 +1,4 @@
-import com.codeModule.entity.DataType;
 import com.service.CodeGeneraService;
-import net.sf.json.JSONArray;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -31,13 +27,17 @@ public class Main {
             return null;
         }
     }
-    public static void main(String[] args) throws IOException {
-        CodeGeneraService.init("config"+File.separator+"Beans.xml");
-        CodeGeneraService.setHtmlTemplatePath(System.getProperty("user.dir")+ File.separator +"out"+File.separator
-                +"production"+File.separator +"CodeGenera"+File.separator +"com" + File.separator + "codeModule" + File.separator +
-                "FileTemplate" + File.separator + "HtmlTemplate.html");
-        CodeGeneraService codeGeneraService=CodeGeneraService.getInstance();
-        System.out.println(codeGeneraService.generatorHTML(readToString(System.getProperty("user.dir")+ File.separator +"out"+File.separator
-                +"production"+File.separator +"CodeGenera"+File.separator +"test.json")));
+    public static void main(String[] args)  {
+        ApplicationContext
+                context = new ClassPathXmlApplicationContext("config"+File.separator+"Beans.xml");
+        CodeGeneraService codeGeneraService=(CodeGeneraService)context.getBean("codeGeneraService");
+        try {
+            System.out.println(codeGeneraService);
+            System.out.println(codeGeneraService.generateCode(readToString(System.getProperty("user.dir")+ File.separator +"out"+File.separator
+                    +"production"+File.separator +"CodeGenera"+File.separator +"test.json")));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

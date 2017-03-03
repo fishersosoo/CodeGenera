@@ -38,4 +38,8 @@ public class OUTPUT extends variableModule {
         html.body().appendChild(div);
         return html;
     }
+    @Override
+    public String generateJavascript(){
+        return "var "+this.getName()+";\n";
+    }
 }
