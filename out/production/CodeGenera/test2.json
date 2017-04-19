@@ -1,0 +1,395 @@
+{
+  "variableArea": [
+    {
+      "id": "INPUT-1488271235100-0",
+      "moduleType": "INPUT",
+      "name": "a",
+      "dtype": "number",
+      "desc": ""
+    },
+    {
+      "id": "INPUT-1488271236179-1",
+      "moduleType": "INPUT",
+      "name": "b",
+      "dtype": "number",
+      "desc": ""
+    },
+    {
+      "id": "INPUT-1488271237539-2",
+      "moduleType": "INPUT",
+      "name": "c",
+      "dtype": "number",
+      "desc": ""
+    },
+    {
+      "id": "VARIABLE-1488271239124-3",
+      "moduleType": "VARIABLE",
+      "name": "d",
+      "dtype": "number",
+      "value": ""
+    },
+    {
+      "id": "VARIABLE-1488271240394-4",
+      "moduleType": "VARIABLE",
+      "name": "e",
+      "dtype": "number",
+      "value": ""
+    },
+    {
+      "id": "VARIABLE-1488271241836-5",
+      "moduleType": "VARIABLE",
+      "name": "f",
+      "dtype": "number",
+      "value": ""
+    },
+    {
+      "id": "OUTPUT-1488271314598-11",
+      "moduleType": "OUTPUT",
+      "name": "g",
+      "dtype": "",
+      "value": ""
+    }
+  ],
+  "procedureArea": [
+    {
+      "INPUT-1488271235100-0": {
+      "id": "INPUT-1488271235100-0",
+      "moduleType": "INPUT",
+      "name": "a",
+      "dtype": "number",
+      "desc": ""
+    },
+      "INPUT-1488271236179-1": {
+        "id": "INPUT-1488271236179-1",
+        "moduleType": "INPUT",
+        "name": "b",
+        "dtype": "number",
+        "desc": ""
+      },
+      "INPUT-1488271237539-2": {
+        "id": "INPUT-1488271237539-2",
+        "moduleType": "INPUT",
+        "name": "c",
+        "dtype": "number",
+        "desc": ""
+      },
+      "VARIABLE-1488271239124-3": {
+        "id": "VARIABLE-1488271239124-3",
+        "moduleType": "VARIABLE",
+        "name": "d",
+        "dtype": "number",
+        "value": ""
+      },
+      "VARIABLE-1488271240394-4": {
+        "id": "VARIABLE-1488271240394-4",
+        "moduleType": "VARIABLE",
+        "name": "e",
+        "dtype": "number",
+        "value": ""
+      },
+      "VARIABLE-1488271241836-5": {
+        "id": "VARIABLE-1488271241836-5",
+        "moduleType": "VARIABLE",
+        "name": "f",
+        "dtype": "number",
+        "value": ""
+      },
+      "WHILE-1488271266156-6": {
+        "id": "WHILE-1488271266156-6",
+        "moduleType": "WHILE",
+        "condition": [
+          {
+            "id": "OPERATOR-1488271273277-7",
+            "parentId": "WHILE-1488271266156-6",
+            "playload": "condition",
+            "moduleType": "OPERATOR",
+            "op": "less",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271240394-4"
+          }
+        ],
+        "procedure": [
+          {
+            "id": "OPERATOR-1488271282749-8",
+            "parentId": "WHILE-1488271266156-6",
+            "playload": "procedure",
+            "moduleType": "OPERATOR",
+            "op": "plus",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271241836-5",
+            "assign": "VARIABLE-1488271239124-3"
+          }
+        ]
+      },
+      "OPERATOR-1488271273277-7": {
+        "id": "OPERATOR-1488271273277-7",
+        "parentId": "WHILE-1488271266156-6",
+        "playload": "condition",
+        "moduleType": "OPERATOR",
+        "op": "less",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271240394-4"
+      },
+      "OPERATOR-1488271282749-8": {
+        "id": "OPERATOR-1488271282749-8",
+        "parentId": "WHILE-1488271266156-6",
+        "playload": "procedure",
+        "moduleType": "OPERATOR",
+        "op": "plus",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271241836-5",
+        "assign": "VARIABLE-1488271239124-3"
+      },
+      "IF-1488271303654-9": {
+        "id": "IF-1488271303654-9",
+        "moduleType": "IF",
+        "condition": [
+          {
+            "id": "OPERATOR-1488271306309-10",
+            "parentId": "IF-1488271303654-9",
+            "playload": "condition",
+            "moduleType": "OPERATOR",
+            "op": "less",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271240394-4",
+            "assign": "VARIABLE-1488271239124-3"
+          }
+        ],
+        "procedure": [
+          {
+            "id": "OPERATOR-1488271407265-14",
+            "parentId": "IF-1488271303654-9",
+            "playload": "procedure",
+            "moduleType": "OPERATOR",
+            "op": "equal",
+            "first": "VARIABLE-1488271241836-5",
+            "second": "VARIABLE-1488271239124-3"
+          }
+        ]
+      },
+      "OPERATOR-1488271306309-10": {
+        "id": "OPERATOR-1488271306309-10",
+        "parentId": "IF-1488271303654-9",
+        "playload": "condition",
+        "moduleType": "OPERATOR",
+        "op": "less",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271240394-4",
+        "assign": "VARIABLE-1488271239124-3"
+      },
+      "OUTPUT-1488271314598-11": {
+        "id": "OUTPUT-1488271314598-11",
+        "moduleType": "OUTPUT",
+        "name": "g",
+        "dtype": "",
+        "value": ""
+      },
+      "OPERATOR-1488271407265-14": {
+        "id": "OPERATOR-1488271407265-14",
+        "parentId": "IF-1488271303654-9",
+        "playload": "procedure",
+        "moduleType": "OPERATOR",
+        "op": "equal",
+        "first": "VARIABLE-1488271241836-5",
+        "second": "VARIABLE-1488271239124-3"
+      }
+    },
+    {
+      "id": "WHILE-1488271266156-6",
+      "moduleType": "WHILE",
+      "condition": [
+        {
+          "id": "OPERATOR-1488271273277-7",
+          "parentId": "WHILE-1488271266156-6",
+          "playload": "condition",
+          "moduleType": "OPERATOR",
+          "op": "less",
+          "first": "VARIABLE-1488271239124-3",
+          "second": "VARIABLE-1488271240394-4"
+        }
+      ],
+      "procedure": [
+        {
+          "id": "OPERATOR-1488271282749-8",
+          "parentId": "WHILE-1488271266156-6",
+          "playload": "procedure",
+          "moduleType": "OPERATOR",
+          "op": "plus",
+          "first": "VARIABLE-1488271239124-3",
+          "second": "VARIABLE-1488271241836-5",
+          "assign": "VARIABLE-1488271239124-3"
+        }
+      ]
+    },
+    {
+      "INPUT-1488271235100-0": {
+        "id": "INPUT-1488271235100-0",
+        "moduleType": "INPUT",
+        "name": "a",
+        "dtype": "number",
+        "desc": ""
+      },
+      "INPUT-1488271236179-1": {
+        "id": "INPUT-1488271236179-1",
+        "moduleType": "INPUT",
+        "name": "b",
+        "dtype": "number",
+        "desc": ""
+      },
+      "INPUT-1488271237539-2": {
+        "id": "INPUT-1488271237539-2",
+        "moduleType": "INPUT",
+        "name": "c",
+        "dtype": "number",
+        "desc": ""
+      },
+      "VARIABLE-1488271239124-3": {
+        "id": "VARIABLE-1488271239124-3",
+        "moduleType": "VARIABLE",
+        "name": "d",
+        "dtype": "number",
+        "value": ""
+      },
+      "VARIABLE-1488271240394-4": {
+        "id": "VARIABLE-1488271240394-4",
+        "moduleType": "VARIABLE",
+        "name": "e",
+        "dtype": "number",
+        "value": ""
+      },
+      "VARIABLE-1488271241836-5": {
+        "id": "VARIABLE-1488271241836-5",
+        "moduleType": "VARIABLE",
+        "name": "f",
+        "dtype": "number",
+        "value": ""
+      },
+      "WHILE-1488271266156-6": {
+        "id": "WHILE-1488271266156-6",
+        "moduleType": "WHILE",
+        "condition": [
+          {
+            "id": "OPERATOR-1488271273277-7",
+            "parentId": "WHILE-1488271266156-6",
+            "playload": "condition",
+            "moduleType": "OPERATOR",
+            "op": "less",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271240394-4"
+          }
+        ],
+        "procedure": [
+          {
+            "id": "OPERATOR-1488271282749-8",
+            "parentId": "WHILE-1488271266156-6",
+            "playload": "procedure",
+            "moduleType": "OPERATOR",
+            "op": "plus",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271241836-5",
+            "assign": "VARIABLE-1488271239124-3"
+          }
+        ]
+      },
+      "OPERATOR-1488271273277-7": {
+        "id": "OPERATOR-1488271273277-7",
+        "parentId": "WHILE-1488271266156-6",
+        "playload": "condition",
+        "moduleType": "OPERATOR",
+        "op": "less",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271240394-4"
+      },
+      "OPERATOR-1488271282749-8": {
+        "id": "OPERATOR-1488271282749-8",
+        "parentId": "WHILE-1488271266156-6",
+        "playload": "procedure",
+        "moduleType": "OPERATOR",
+        "op": "plus",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271241836-5",
+        "assign": "VARIABLE-1488271239124-3"
+      },
+      "IF-1488271303654-9": {
+        "id": "IF-1488271303654-9",
+        "moduleType": "IF",
+        "condition": [
+          {
+            "id": "OPERATOR-1488271306309-10",
+            "parentId": "IF-1488271303654-9",
+            "playload": "condition",
+            "moduleType": "OPERATOR",
+            "op": "less",
+            "first": "VARIABLE-1488271239124-3",
+            "second": "VARIABLE-1488271240394-4",
+            "assign": "VARIABLE-1488271239124-3"
+          }
+        ],
+        "procedure": [
+          {
+            "id": "OPERATOR-1488271407265-14",
+            "parentId": "IF-1488271303654-9",
+            "playload": "procedure",
+            "moduleType": "OPERATOR",
+            "op": "equal",
+            "first": "VARIABLE-1488271241836-5",
+            "second": "VARIABLE-1488271239124-3"
+          }
+        ]
+      },
+      "OPERATOR-1488271306309-10": {
+        "id": "OPERATOR-1488271306309-10",
+        "parentId": "IF-1488271303654-9",
+        "playload": "condition",
+        "moduleType": "OPERATOR",
+        "op": "less",
+        "first": "VARIABLE-1488271239124-3",
+        "second": "VARIABLE-1488271240394-4",
+        "assign": "VARIABLE-1488271239124-3"
+      },
+      "OUTPUT-1488271314598-11": {
+        "id": "OUTPUT-1488271314598-11",
+        "moduleType": "OUTPUT",
+        "name": "g",
+        "dtype": "",
+        "value": ""
+      },
+      "OPERATOR-1488271407265-14": {
+        "id": "OPERATOR-1488271407265-14",
+        "parentId": "IF-1488271303654-9",
+        "playload": "procedure",
+        "moduleType": "OPERATOR",
+        "op": "equal",
+        "first": "VARIABLE-1488271241836-5",
+        "second": "VARIABLE-1488271239124-3"
+      }
+    },
+    {
+      "id": "IF-1488271303654-9",
+      "moduleType": "IF",
+      "condition": [
+        {
+          "id": "OPERATOR-1488271306309-10",
+          "parentId": "IF-1488271303654-9",
+          "playload": "condition",
+          "moduleType": "OPERATOR",
+          "op": "less",
+          "first": "VARIABLE-1488271239124-3",
+          "second": "VARIABLE-1488271240394-4",
+          "assign": "VARIABLE-1488271239124-3"
+        }
+      ],
+      "procedure": [
+        {
+          "id": "OPERATOR-1488271407265-14",
+          "parentId": "IF-1488271303654-9",
+          "playload": "procedure",
+          "moduleType": "OPERATOR",
+          "op": "equal",
+          "first": "VARIABLE-1488271241836-5",
+          "second": "VARIABLE-1488271239124-3"
+        }
+      ]
+    }
+  ]
+}
